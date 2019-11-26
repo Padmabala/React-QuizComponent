@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import QuizQuestion from "./QuizQuestion";
 import QuizEnd from "./QuizEnd";
+
 let quizData = require("./quiz_data.json");
 
 class Quiz extends Component {
@@ -18,7 +19,7 @@ class Quiz extends Component {
     return (
       <div>
         {isQuizEnd ? (
-          <QuizEnd />
+          <QuizEnd></QuizEnd>
         ) : (
           <QuizQuestion
             quiz_question={quizData.quiz_questions[quiz_position - 1]}
